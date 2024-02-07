@@ -2,7 +2,7 @@
     <div class="news-swiper bg-white shadow-lg rounded-xl my-[50px]">
       <carousel :items-to-show="3">
         <slide v-for="price in priceArray" :key="price">
-    <div class="flex flex-col py-[60px]">
+    <div class="flex flex-col py-[60px] px-[117px] slider-price">
       <div class="price_title font-medium text-orange text-[36px]"> {{ price.name }}</div>
      <div class="price text-black text-[36px] font-medium"> {{ price.price }}</div>
      <div class="price_dscr text-black text-[18px] font-normal">per month</div>

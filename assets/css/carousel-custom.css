@@ -1,31 +1,43 @@
-@import url('/node_modules/vue3-carousel/dist/carousel.css');
+@import url("/node_modules/vue3-carousel/dist/carousel.css");
 
-.carousel{
-    overflow: hidden;
+.carousel {
+  overflow: hidden;
 }
 
 .carousel .carousel__viewport {
-    overflow: visible ;
+  overflow: visible;
 }
 
-.carousel__pagination .carousel__pagination-item .carousel__pagination-button--active::after {
-    display: block;
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius:20px;
-    background-color: #F8931F; 
-  }
+.carousel__pagination
+  .carousel__pagination-item
+  .carousel__pagination-button--active::after {
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #f8931f;
+}
 
 .carousel__pagination-item .carousel__pagination-button::after {
-    display: block;
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius:20px;
-    background-color: #CCCCCC; 
-  }
+  display: block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #cccccc;
+}
 
-  .carousel__pagination-item .carousel__pagination-button:hover::after{
-    background-color: #F8931F; 
-  }
+.carousel__pagination-item .carousel__pagination-button:hover::after {
+  background-color: #f8931f;
+}
+
+.slider-price::after {
+  content: "";
+  width: 1px;
+  height: 137px;
+  background-color: #cccccc;
+  margin: auto;
+  position: absolute;
+  left: 0;
+}

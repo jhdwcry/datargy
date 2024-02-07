@@ -1,6 +1,6 @@
 <template>
 
-<section class="flex flex-col justify-center mx-auto subscribtion-section mt-[133px]">
+<section class="flex flex-col justify-center mx-auto subscribtion-section mt-[210px]">
     <div class="subscribtion-nav">
     <ul class="subscribtion-list flex justify-center gap-[25px] pb-[65px]">
     <li> <a href="#" class="subscribtion-item active"> Basic</a></li>
@@ -22,7 +22,7 @@
     </tr>
     <tr>
       <th scope="row" class="text-[20px]">Detailed historical data (charts, csv/xlsx)</th>
-      <td><img class="table_img" src="../assets/img/check_1.svg" alt=""></td>
+      <td><img class="m-auto text-center" src="../assets/img/check_1.svg" alt=""></td>
     </tr>
     <tr>
       <th scope="row" class="text-[20px]">Time limit for detailed historical data</th>
