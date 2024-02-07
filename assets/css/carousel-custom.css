@@ -1,0 +1,31 @@
+@import url('/node_modules/vue3-carousel/dist/carousel.css');
+
+.carousel{
+    overflow: hidden;
+}
+
+.carousel .carousel__viewport {
+    overflow: visible ;
+}
+
+.carousel__pagination .carousel__pagination-item .carousel__pagination-button--active::after {
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius:20px;
+    background-color: #F8931F; 
+  }
+
+.carousel__pagination-item .carousel__pagination-button::after {
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius:20px;
+    background-color: #CCCCCC; 
+  }
+
+  .carousel__pagination-item .carousel__pagination-button:hover::after{
+    background-color: #F8931F; 
+  }

@@ -1,49 +1,37 @@
 <template>
-
-<div class="news-swiper flex justify-center">
-    <swiper
-    :modules='[SwiperPagination]'
-    :slides-per-view="3"
-    :space-between="50"
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
-    :pagination="true"
-  >
-
-         <swiper-slide class="swiper-slide flex justify-center">
-            <div class="swiper-content flex flex-col justify-center items-center w-[370px] h-[570px] bg-white rounded-xl">
+      <carousel :items-to-show="3">
+        <slide v-for="news in newsArray" :key="news">
+            <div class="flex flex-col items-center pt-[26px] w-[370px] h-[570px] bg-white rounded-xl shadow-lg">
                 <img src="../assets/img/news_img.png" alt="" class="w-[280px] h-[243]">
-                <div class="text-black text-[18px] text-medium pb-[45px]">Vitae sapien pellentesque habitant morbi</div>
-                <p class="text-black text-[12px] px-[40px]">Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
+                <div class="text-black text-[18px] font-semibold pt-[32px] pb-[46px] px-[46px]">{{news.name}}</div>
+                <div class="text-black text-[12px] px-[40px] text-left">{{ news.content }}</div>
             </div>
-        </swiper-slide>
+    </slide>
 
-         <swiper-slide class="swiper-slide flex justify-center">
-                <div class="swiper-content flex flex-col justify-center items-center w-[370px] h-[570px] bg-white rounded-xl">
-                    <img src="../assets/img/news_img.png" alt="" class="w-[280px] h-[243]">
-                    <div class="text-black text-[18px] text-medium pb-[45px]">Vitae sapien pellentesque habitant morbi</div>
-                    <p class="text-black text-[12px] px-[40px]">Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
-                </div>
-            </swiper-slide>
+    <template #addons>
+        <pagination />
+    </template>
+  </carousel>
+</template>
 
-             <swiper-slide class="swiper-slide flex justify-center">
-                <div class="swiper-content flex flex-col justify-center items-center w-[370px] h-[570px] bg-white rounded-xl">
-                    <img src="../assets/img/news_img.png" alt="" class="w-[280px] h-[243]">
-                    <div class="text-black text-[18px] text-medium pb-[45px]">Vitae sapien pellentesque habitant morbi</div>
-                    <p class="text-black text-[12px] px-[40px]">Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
-                </div>
-            </swiper-slide>
+<script>
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
-               <swiper-slide class="swiper-slide flex justify-center">
-                    <div class="swiper-content flex flex-col justify-center items-center w-[370px] h-[570px] bg-white rounded-xl">
-                        <img src="../assets/img/news_img.png" alt="" class="w-[280px] h-[243]">
-                        <div class="text-black text-[18px] text-medium pb-[45px]">Vitae sapien pellentesque habitant morbi</div>
-                        <p class="text-black text-[12px] px-[40px]]">Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
-                    </div>
-                </swiper-slide>
-
-
-                <div class="swiper-pagination"></div>
-  </swiper>
-</div>
-  </template>
+export default {
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+  setup() {
+    let newsArray = [
+      {name:'Vitae sapien pellentesque habitant morbi', content: 'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.'},
+      {name:'Vitae sapien pellentesque habitant morbi', content: 'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.'},
+      {name:'Vitae sapien pellentesque habitant morbi', content: 'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.'},
+      {name:'Vitae sapien pellentesque habitant morbi', content: 'Vitae sapien pellentesque habitant morbinunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.'},
+    ]
+    return{newsArray}
+  },
+}
+</script>

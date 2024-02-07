@@ -33,9 +33,9 @@
       
           <div class="price-section flex flex-col ">
             <div class="price">
-              <img class="bg-market absolute" src="../assets/img/market_bg.svg" alt="">
+              <img class="bg-market absolute top-6" src="../assets/img/market_bg.svg" alt="">
               <div class="w-[93px] text-center"><span class="w-[93px] text-black text-2xl font-normal top-1/4 text-center">50.16 £/Mwh</span></div>
-              <div class="text-green text-lg font-medium ">+3.4%</div>
+              <div class="text-green text-lg font-medium pt-[20px] ">+3.4%</div>
             </div>
           </div>
 
@@ -104,17 +104,19 @@
     </div>
      </div>
 
+     <Chart/>
+
      </section>
 
 
-     <section class="container news mb-[70px]">
+     <section class="container news mb-[70px] mx-auto">
         <h2 class="text-orange text-center mb-5 text-4xl font-medium">News</h2>
 
         <NewsSlider/>
 
      </section>
 
-      <section class="container subscriptions mb-[70px]">
+      <section class="container subscriptions mb-[70px] mx-auto">
            <div class="section-title flex flex-col">
              <h2 class="text-orange text-center mb-5 text-4xl font-medium">Subscribe</h2>
                 <p class="text-sm text-[#989898] text-center">Vitae sapien pellentesque habitant morb nunc. Viverra aliquet  porttitor rhoncus </p>

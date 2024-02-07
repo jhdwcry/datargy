@@ -29,3 +29,9 @@ export default {
     name: 'AppHeader',
 }
 </script>
+
+<style>
+li{
+  font-weight: 500;
+}
+</style>

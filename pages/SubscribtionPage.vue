@@ -14,7 +14,7 @@
 </div>
 
 <div class="flex flex-col justify-center items-center subscribtion-form mt-[65px]">
-    <table>
+    <table class="rounded-corner">
   <tbody class="bg-white">
     <tr>
       <th scope="row" class="text-[20px]">Registration</th>
@@ -22,7 +22,7 @@
     </tr>
     <tr>
       <th scope="row" class="text-[20px]">Detailed historical data (charts, csv/xlsx)</th>
-      <td><img class="table_img" src="../assets/img/check.svg" alt=""></td>
+      <td><img class="table_img" src="../assets/img/check_1.svg" alt=""></td>
     </tr>
     <tr>
       <th scope="row" class="text-[20px]">Time limit for detailed historical data</th>
@@ -59,7 +59,7 @@
 </table>
 
 
-<button class="bg-orange text-white text-[25px] py-[25px] px-[220px] rounded-xl mt-[65px]">Subscribe</button>
+<button class="bg-orange text-white text-[20px] py-[20px] px-[220px] rounded-xl mt-[65px]">Subscribe</button>
 </div>
 </section>
 
@@ -102,13 +102,14 @@
 
 <style scoped>
 .subscribtion-item {
-    padding: 15px 25px;
-    border-radius: 12px;
-border: 1px solid #F8931F;
-font-size: 20px;
-font-weight: 500;
-line-height: 120%;
-color:#F8931F ;
+  font-size: 20px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  border: 1px solid #F8931F;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color:#F8931F ;
 }
 
 .active{
@@ -120,17 +121,21 @@ color:#F8931F ;
 table{
     box-shadow: 15px 25px 60px 0px rgba(0, 0, 0, 0.05);
     border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
+    border-spacing: 0;
+    overflow: hidden;
+    border-collapse: collapse;
 }
 
+td, th {
+    padding: 8px;
+}
 th{
     width: 542px;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 34px;
     text-align: left;
-  
+    font-weight: 400;
 }
 
 td{
@@ -146,6 +151,32 @@ td{
     margin: auto;
     text-align: center;
 }
+
+table.rounded-corner {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table.rounded-corner th:first-child {
+    border-top-left-radius: 10px;
+}
+
+table.rounded-corner th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table.rounded-corner th:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+table.rounded-corner td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+table.rounded-corner td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
 
 </style>
 
